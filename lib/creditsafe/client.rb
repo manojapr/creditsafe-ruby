@@ -133,8 +133,7 @@ module Creditsafe
         convert_request_keys_to: :none,
         adapter: :excon,
         log: true,
-        log_level: debug,
-        logger: Rails.logger,
+        log_level: @log_level,
         pretty_print_xml: true
       }
       Savon.client(options.merge(@savon_opts))
